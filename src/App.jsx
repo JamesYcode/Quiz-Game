@@ -3,6 +3,8 @@ import Header from './components/Header';
 import Loader from './components/Loader';
 import Selections from './components/Selections';
 import Error from './components/Error';
+import Progress from './components/Progress';
+import Question from './components/Question';
 
 const initialState = {
   questions: [],
@@ -12,6 +14,7 @@ const initialState = {
   points: 0,
   highscore: 0,
   secondsRemaining: 10,
+  type: null,
 };
 
 function reducer(state, action) {
@@ -27,6 +30,13 @@ function reducer(state, action) {
         ...state,
         status: 'error',
       };
+    case 'start':
+      return {
+        ...state,
+        status: 'active',
+        type: action.payload,
+      };
+
     default:
       throw new Error('Action unknown');
   }
@@ -40,9 +50,7 @@ function App() {
         const res = await fetch('http://localhost:8000/questions');
         const data = await res.json();
         dispatch({ type: 'dataRecieved', payload: data });
-        console.log(data);
       } catch (e) {
-        console.log(e);
         dispatch({ type: 'dataFailed' });
       }
     }
@@ -57,16 +65,51 @@ function App() {
     points,
     highscore,
     secondsRemaining,
+    type,
   } = state;
 
+  const filteredQuestions = questions.filter(
+    (question) => question.type === type
+  );
+  const numQuestions = filteredQuestions.length;
+  const maxPossiblePoints = filteredQuestions.reduce(
+    (prev, cur) => prev + cur.points,
+    0
+  );
+
+  console.log(filteredQuestions);
+
   return (
-    <div className='app'>
-      <Header />
-      {status === 'loading' && <Loader />}
-      {status === 'error' && <Error />}
-      {status === 'ready' && (
+    <div className='app-container'>
+      <div className='app'>
+        {status === 'loading' && (
+          <>
+            <Header />
+            <Loader />
+          </>
+        )}
+        {status === 'error' && <Error />}
+        {status === 'ready' && (
+          <>
+            <Header />
+            <Selections dispatch={dispatch} />
+          </>
+        )}
+      </div>
+      {status === 'active' && (
         <>
-          <Selections />
+          <Progress
+            numQuestions={numQuestions}
+            index={index}
+            points={points}
+            maxPossiblePoints={maxPossiblePoints}
+            answer={answer}
+          />
+          <Question
+            dispatch={dispatch}
+            answer={answer}
+            question={filteredQuestions.at(index)}
+          />
         </>
       )}
     </div>

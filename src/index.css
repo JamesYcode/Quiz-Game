@@ -80,6 +80,107 @@ h3:hover {
   border-radius: 100px;
 }
 
+.progress {
+  width: 50%;
+  margin: 4rem auto;
+  display: grid;
+  justify-content: space-between;
+  gap: 1.2rem;
+  grid-template-columns: auto auto;
+  font-size: 1.8rem;
+  color: var(--color-medium);
+}
+
+progress {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 12px;
+  grid-column: 1 / -1;
+}
+
+::-webkit-progress-bar {
+  background-color: var(--color-medium);
+  border-radius: 100px;
+}
+
+::-webkit-progress-value {
+  background-color: var(--color-theme);
+  border-radius: 100px;
+}
+
+.question {
+  font-size: 2rem;
+  text-align: center;
+  display: block;
+  border: 1px solid red;
+}
+
+.question h4 {
+  margin-bottom: 2.5rem;
+}
+
+.btn {
+  display: block;
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.8rem;
+  border: 2px solid var(--color-dark);
+  background-color: var(--color-dark);
+  padding: 1.2rem 2.4rem;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: 0.3s;
+}
+
+.btn:not([disabled]):hover {
+  background-color: var(--color-darkest);
+  transform: translateX(1.2rem);
+}
+
+/* .btn-option:not([disabled]):hover {
+  transform: translateX(1.2rem);
+} */
+
+
+/* .btn[disabled]:hover {
+  cursor: not-allowed;
+} */
+
+
+/* .btn-ui {
+  float: right;
+} */
+
+
+.options {
+  margin: 0 auto 3.2rem auto;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.btn-option {
+  border: 1px solid red;
+  text-align: left;
+}
+
+.btn-option.correct {
+  background-color: var(--color-theme);
+  border: 2px solid var(--color-theme);
+  color: var(--color-light);
+}
+
+.btn-option.wrong {
+  background-color: var(--color-accent);
+  border: 2px solid var(--color-accent);
+  color: var(--color-darkest);
+}
+
+.answer {
+  transform: translateX(2rem);
+}
+
 .loader-container {
   display: flex;
   flex-direction: column;

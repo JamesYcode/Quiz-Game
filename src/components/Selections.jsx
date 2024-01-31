@@ -1,10 +1,14 @@
-function Selections() {
+function Selections({ dispatch }) {
   return (
     <div className='selection-container'>
-      <h3>HTML</h3>
-      <h3>CSS</h3>
-      <h3>JavaScript</h3>
-      <h3>React.js</h3>
+      <h3 onClick={() => dispatch({ type: 'start', payload: 'HTML' })}>HTML</h3>
+      <h3 onClick={() => dispatch({ type: 'start', payload: 'CSS' })}>CSS</h3>
+      <h3 onClick={() => dispatch({ type: 'start', payload: 'JavaScript' })}>
+        JavaScript
+      </h3>
+      <h3 onClick={() => dispatch({ type: 'start', payload: 'React' })}>
+        React.js
+      </h3>
     </div>
   );
 }
