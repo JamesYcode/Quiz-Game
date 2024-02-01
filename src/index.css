@@ -25,7 +25,6 @@ body {
 }
 
 .app {
-  border: 1px solid red;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -112,7 +111,6 @@ progress {
   font-size: 2rem;
   text-align: center;
   display: block;
-  border: 1px solid red;
 }
 
 .question h4 {
@@ -134,17 +132,16 @@ progress {
 
 .btn:not([disabled]):hover {
   background-color: var(--color-darkest);
+}
+
+.btn-option:not([disabled]):hover {
   transform: translateX(1.2rem);
 }
 
-/* .btn-option:not([disabled]):hover {
-  transform: translateX(1.2rem);
-} */
 
-
-/* .btn[disabled]:hover {
+.btn[disabled]:hover {
   cursor: not-allowed;
-} */
+}
 
 
 /* .btn-ui {
@@ -161,7 +158,6 @@ progress {
 }
 
 .btn-option {
-  border: 1px solid red;
   text-align: left;
 }
 
@@ -177,8 +173,50 @@ progress {
   color: var(--color-darkest);
 }
 
+.next-container {
+  width: 80%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.btn-ui {
+  float: right;
+}
+
+
 .answer {
   transform: translateX(2rem);
+}
+
+
+.result-container {
+  width: 30%;
+  border: 1px solid red;
+}
+
+.result {
+  background-color: var(--color-theme);
+  color: var(--color-light);
+  border-radius: 100px;
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+  /* margin-bottom: 2.6rem; */
+}
+
+.finished-container {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.highscore {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 4rem auto;
 }
 
 .loader-container {
