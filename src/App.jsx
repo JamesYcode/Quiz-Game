@@ -36,11 +36,14 @@ function reducer(state, action) {
         status: 'error',
       };
     case 'start':
+      const filteredQuestionsArr = state.questions.filter(
+        (question) => question.type === action.payload
+      );
       return {
         ...state,
         status: 'active',
         type: action.payload,
-        secondsRemaining: state.questions.length * SECONDS_PER_QUESTION,
+        secondsRemaining: filteredQuestionsArr.length * SECONDS_PER_QUESTION,
       };
     case 'newAnswer':
       const question = state.questions.at(state.index);
