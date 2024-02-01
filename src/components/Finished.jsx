@@ -8,7 +8,7 @@ function Finished({ points, maxPossiblePoints, dispatch, highscore }) {
   if (percentage === 0) result = '💩';
 
   return (
-    <div className='result-container'>
+    <div className='result-container animate__animated animate__zoomInUp'>
       <p className='result'>
         ({result}) You scored {points} out of {maxPossiblePoints} ({percentage}
         %)
