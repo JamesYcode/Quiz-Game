@@ -151,16 +151,460 @@
       "type": "React"
     },
     {
-      "question": "When will an effect run if it doesn't have a dependency array?",
+      "question": "What does HTML stands for?",
       "options": [
-        "Only when the component mounts",
-        "Only when the component unmounts",
-        "The first time the component re-renders",
-        "Each time the component is re-rendered"
+        "Hypertext Machine Language",
+        "Hypertext and links markup language",
+        "Hypertext Markup Language",
+        "Hightext Machine Language"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "type": "HTML"
+    },
+    {
+      "question": "How is document type initialized in HTML5?",
+      "options": [
+        "</DOCTYPE HTML>",
+        "</DOCTYPE>",
+        "<!DOCTYPE HTML>",
+        "</DOCTYPE html>"
+      ],
+      "correctOption": 2,
+      "points": 10,
+      "type": "HTML"
+    },
+    {
+      "question": "Which of the following HTML Elements is used for making any text bold?",
+      "options": [
+        "<p>",
+        "<i>",
+        "<li>",
+        "<b>"
+      ],
+      "correctOption": 3,
+      "points": 10,
+      "type": "HTML"
+    },
+    {
+      "question": "Which of the following HTML element is used for creating an unordered list?",
+      "options": [
+        "<i>",
+        "<ui>",
+        "<ul>",
+        "<em>"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "type": "HTML"
+    },
+    {
+      "question": "Which of the following characters indicate closing of a tag?",
+      "options": [
+        "<.>",
+        "</>",
+        "<//>",
+        "<!>"
+      ],
+      "correctOption": 1,
+      "points": 20,
+      "type": "HTML"
+    },
+    {
+      "question": "What is the font-size of the h1 heading tag?",
+      "options": [
+        "3.5em",
+        "2.25em",
+        "1em",
+        "2em"
+      ],
+      "correctOption": 3,
+      "points": 30,
+      "type": "HTML"
+    },
+    {
+      "question": "How many heading tags are there in HTML5?",
+      "options": [
+        "5",
+        "4",
+        "6",
+        "7"
+      ],
+      "correctOption": 2,
+      "points": 30,
+      "type": "HTML"
+    },
+    {
+      "question": "How many attributes are there in HTML5?",
+      "options": [
+        "2",
+        "1",
+        "4",
+        "None of the above"
+      ],
+      "correctOption": 3,
+      "points": 30,
+      "type": "HTML"
+    },
+    {
+      "question": "Which of the following attributes is used to add link to any element?",
+      "options": [
+        "link",
+        "ref",
+        "newRef",
+        "href"
+      ],
+      "correctOption": 3,
+      "points": 30,
+      "type": "HTML"
+    },
+    {
+      "question": "Which of the following is the correct way of creating an hyperlink in HTML?",
+      "options": [
+        "<a>www.google.com</a>",
+        "<a link='www.google.com'>Google</a>",
+        "<a href='www.google.com'>Google</a>",
+        "<a ref='www.google.com'>Google</a>"
+      ],
+      "correctOption": 2,
+      "points": 40,
+      "type": "HTML"
+    },
+    {
+      "question": "What is the purpose of using div tags in HTML?",
+      "options": [
+        "For creating Different styles",
+        "For adding headings",
+        "For creating different sections",
+        "For adding titles"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "type": "HTML"
+    },
+    {
+      "question": "Which of the following tags is used to make a portion of text italic in HTML?",
+      "options": [
+        "<italic>",
+        "<i>",
+        "<style='italic'>",
+        "<style='i'>"
+      ],
+      "correctOption": 1,
+      "points": 20,
+      "type": "HTML"
+    },
+    {
+      "question": "Which of the following tags is used to add a line-break in HTML?",
+      "options": [
+        "<br>",
+        "<break>",
+        "</br>",
+        "</break>"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "type": "HTML"
+    },
+    {
+      "question": "Which of the following attributes is used to open an hyperlink in new tab?",
+      "options": [
+        "tab",
+        "target",
+        "ref",
+        "href"
+      ],
+      "correctOption": 1,
+      "points": 30,
+      "type": "HTML"
+    },
+    {
+      "question": "Which of the following is the correct way to add background color in HTML?",
+      "options": [
+        "<body color = “green”>",
+        "<body style = “background-color=green”>",
+        "<body bg-color = “green”>",
+        "<body style = “background-color: green;”>"
+      ],
+      "correctOption": 3,
+      "points": 40,
+      "type": "HTML"
+    },
+    {
+      "question": "Which among the following is correct HTML code for making a checkbox?",
+      "options": [
+        "<input type='checkbox'>",
+        "<checkbox>",
+        "<check>",
+        "None of the above"
+      ],
+      "correctOption": 0,
+      "points": 30,
+      "type": "HTML"
+    },
+    {
+      "question": "What does CSS stand for?",
+      "options": [
+        "Cascade Sheets Style",
+        "Color and Style Sheets",
+        "Coded Style Sheet",
+        "Cascading Style Sheets"
       ],
       "correctOption": 3,
       "points": 20,
-      "type": "HTML"
+      "type": "CSS"
+    },
+    {
+      "question": "Which of the following is the correct syntax to add the external stylesheet in CSS?",
+      "options": [
+        "<style src = quiz.css>",
+        "<link rel='stylesheet' type='quiz/css' href='quiz.css'>",
+        "<style src = 'quiz.css'>",
+        "<stylesheet> quiz.css </stylesheet>"
+      ],
+      "correctOption": 1,
+      "points": 30,
+      "type": "CSS"
+    },
+    {
+      "question": "Which of the below CSS properties is used to change the background color of CSS ?",
+      "options": [
+        "bg color",
+        "color-background",
+        "background-color",
+        "color"
+      ],
+      "correctOption": 2,
+      "points": 10,
+      "type": "CSS"
+    },
+    {
+      "question": "Which of the below CSS class is used to change the text color of CSS ?",
+      "options": [
+        "color",
+        "color-background",
+        "None of the above",
+        "background-color"
+      ],
+      "correctOption": 0,
+      "points": 10,
+      "type": "CSS"
+    },
+    {
+      "question": "Which of the below is the correct syntax to put a line over text in CSS?",
+      "options": [
+        "text-decoration: line",
+        "text-decoration: none",
+        "text-decoration: overline",
+        "text-decoration: underline"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "type": "CSS"
+    },
+    {
+      "question": "Which below property of CSS is used to set the indentation of the first line in a block of text ?",
+      "options": [
+        "text-underlne-property",
+        "text-indent property",
+        "text-decoration none",
+        "text-overflow property"
+      ],
+      "correctOption": 1,
+      "points": 20,
+      "type": "CSS"
+    },
+    {
+      "question": "Which of the below CSS properties represent the order of flex items in the grid container ?",
+      "options": [
+        "order",
+        "float",
+        "overflow",
+        "All of the above"
+      ],
+      "correctOption": 0,
+      "points": 40,
+      "type": "CSS"
+    },
+    {
+      "question": "Which element is used to represent the transparency of an element in CSS ?",
+      "options": [
+        "Hover",
+        "Opacity",
+        "Transparent",
+        "Overlay"
+      ],
+      "correctOption": 1,
+      "points": 30,
+      "type": "CSS"
+    },
+    {
+      "question": "Which below CSS property best describes how an image or video fits into a container?",
+      "options": [
+        "object-fit",
+        "position-hide",
+        "object-move",
+        "None of the above"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "type": "CSS"
+    },
+    {
+      "question": "What property is used to define container as a flexbox?",
+      "options": [
+        "display: flexbox",
+        "display: flex",
+        "flexbox: flex",
+        "None of the above"
+      ],
+      "correctOption": 1,
+      "points": 30,
+      "type": "CSS"
+    },
+    {
+      "question": "Which of the following is true about variable naming conventions in JavaScript?",
+      "options": [
+        "JavaScript variable names must begin with a letter or the underscore character",
+        "JavaScript variable names are case sensitive",
+        "Both of the above",
+        "None of the above"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "type": "JavaScript"
+    },
+    {
+      "question": "Which of the following is a valid type of function javascript supports?",
+      "options": [
+        "named function",
+        "anonymous function",
+        "Both of the above",
+        "None of the above"
+      ],
+      "correctOption": 2,
+      "points": 20,
+      "type": "JavaScript"
+    },
+    {
+      "question": "Which built-in method sorts the elements of an array?",
+      "options": [
+        "changeOrder(order)",
+        "order()",
+        "sort()",
+        "None of the above"
+      ],
+      "correctOption": 2,
+      "points": 10,
+      "type": "JavaScript"
+    },
+    {
+      "question": "Which of the following function of String object returns the character at the specified index?",
+      "options": [
+        "charAt()",
+        "concat()",
+        "charCodeAt()",
+        "indexOf()"
+      ],
+      "correctOption": 0,
+      "points": 10,
+      "type": "JavaScript"
+    },
+    {
+      "question": "Which of the following function of String object is used to match a regular expression against a string?",
+      "options": [
+        "concat()",
+        "match()",
+        "search()",
+        "replace()"
+      ],
+      "correctOption": 1,
+      "points": 10,
+      "type": "JavaScript"
+    },
+    {
+      "question": "Which Array method creates a new array with elements that satisfy a given filtering function?",
+      "options": [
+        "map()",
+        "filter()",
+        "some()",
+        "forEach()"
+      ],
+      "correctOption": 1,
+      "points": 40,
+      "type": "JavaScript"
+    },
+    {
+      "question": "True + False",
+      "options": [
+        "1",
+        "NaN",
+        "SyntaxError",
+        "Null"
+      ],
+      "correctOption": 0,
+      "points": 20,
+      "type": "JavaScript"
+    },
+    {
+      "question": "[1, 2, 3] + [4, 5, 6, 7]",
+      "options": [
+        "'1, 2, 3, 4, 5, 6, 7'",
+        "'1234567'",
+        "NaN",
+        "'1, 2, 34, 5, 6, 7'"
+      ],
+      "correctOption": 3,
+      "points": 30,
+      "type": "JavaScript"
+    },
+    {
+      "question": "",
+      "options": [
+        "",
+        "",
+        "",
+        ""
+      ],
+      "correctOption": 1,
+      "points": 30,
+      "type": "JavaScript"
+    },
+    {
+      "question": "false === undefined",
+      "options": [
+        "false",
+        "true",
+        "undefined",
+        "Null"
+      ],
+      "correctOption": 0,
+      "points": 30,
+      "type": "JavaScript"
+    },
+    {
+      "question": "Which method always rounds down and returns the largest integer less than or equal to a given number?",
+      "options": [
+        "Math.ceil()",
+        "Math.floor()",
+        "Math.round()",
+        "Math.min()"
+      ],
+      "correctOption": 1,
+      "points": 30,
+      "type": "JavaScript"
+    },
+    {
+      "question": "Which method returns the value of a number rounded to the nearest integer?",
+      "options": [
+        "Math.round()",
+        "Math.min()",
+        "Math.ceil()",
+        "Math.floor()"
+      ],
+      "correctOption": 0,
+      "points": 30,
+      "type": "JavaScript"
     }
   ]
 }
