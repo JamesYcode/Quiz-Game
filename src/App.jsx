@@ -46,7 +46,10 @@ function reducer(state, action) {
         secondsRemaining: filteredQuestionsArr.length * SECONDS_PER_QUESTION,
       };
     case 'newAnswer':
-      const question = state.questions.at(state.index);
+      const filteredQuestions = state.questions.filter(
+        (question) => question.type === state.type
+      );
+      const question = filteredQuestions.at(state.index);
       return {
         ...state,
         answer: action.payload,
@@ -66,6 +69,7 @@ function reducer(state, action) {
       return {
         ...state,
         answer: null,
+        type: null,
         status: 'finished',
         highscore:
           state.points > state.highscore ? state.points : state.highscore,
@@ -78,6 +82,7 @@ function reducer(state, action) {
         answer: null,
         points: 0,
         highscore: state.highscore,
+        type: null,
       };
     case 'tick':
       return {
@@ -98,7 +103,20 @@ function App() {
       try {
         const res = await fetch('http://localhost:8000/questions');
         const data = await res.json();
-        dispatch({ type: 'dataRecieved', payload: data });
+        function shuffle(data) {
+          let currentIndex = data.length,
+            randomIndex;
+          while (currentIndex > 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex--;
+            [data[currentIndex], data[randomIndex]] = [
+              data[randomIndex],
+              data[currentIndex],
+            ];
+          }
+          return data;
+        }
+        dispatch({ type: 'dataRecieved', payload: shuffle(data) });
       } catch (e) {
         dispatch({ type: 'dataFailed' });
       }
