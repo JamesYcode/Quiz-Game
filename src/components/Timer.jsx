@@ -10,7 +10,7 @@ function Timer({ dispatch, secondsRemaining }) {
       }, 1000);
       return () => clearInterval(timer);
     },
-    [dispatch]
+    [dispatch, secondsRemaining]
   );
   return (
     <div className='timer-container'>

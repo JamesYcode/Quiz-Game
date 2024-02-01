@@ -102,19 +102,7 @@ function App() {
       try {
         const res = await fetch('http://localhost:8000/questions');
         const data = await res.json();
-        function shuffle(data) {
-          let currentIndex = data.length,
-            randomIndex;
-          while (currentIndex > 0) {
-            randomIndex = Math.floor(Math.random() * currentIndex);
-            currentIndex--;
-            [data[currentIndex], data[randomIndex]] = [
-              data[randomIndex],
-              data[currentIndex],
-            ];
-          }
-          return data;
-        }
+
         dispatch({ type: 'dataRecieved', payload: shuffle(data) });
       } catch (e) {
         dispatch({ type: 'dataFailed' });
@@ -142,6 +130,20 @@ function App() {
     (prev, cur) => prev + cur.points,
     0
   );
+
+  function shuffle(data) {
+    let currentIndex = data.length,
+      randomIndex;
+    while (currentIndex > 0) {
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+      [data[currentIndex], data[randomIndex]] = [
+        data[randomIndex],
+        data[currentIndex],
+      ];
+    }
+    return data;
+  }
 
   return (
     <div className='app-container'>
