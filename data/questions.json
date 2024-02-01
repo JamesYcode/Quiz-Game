@@ -559,18 +559,6 @@
       "type": "JavaScript"
     },
     {
-      "question": "",
-      "options": [
-        "",
-        "",
-        "",
-        ""
-      ],
-      "correctOption": 1,
-      "points": 30,
-      "type": "JavaScript"
-    },
-    {
       "question": "false === undefined",
       "options": [
         "false",
