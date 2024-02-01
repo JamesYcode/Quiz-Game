@@ -113,9 +113,6 @@ function App() {
     0
   );
 
-  console.log(filteredQuestions);
-  console.log(numQuestions - 1);
-
   return (
     <div className='app-container'>
       <div className='app'>
