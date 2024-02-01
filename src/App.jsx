@@ -7,6 +7,7 @@ import Progress from './components/Progress';
 import Question from './components/Question';
 import NextButton from './components/NextButton';
 import Finished from './components/Finished';
+import Timer from './components/Timer';
 
 const initialState = {
   questions: [],
@@ -18,6 +19,8 @@ const initialState = {
   secondsRemaining: 10,
   type: null,
 };
+
+const SECONDS_PER_QUESTION = 30;
 
 function reducer(state, action) {
   switch (action.type) {
@@ -37,6 +40,7 @@ function reducer(state, action) {
         ...state,
         status: 'active',
         type: action.payload,
+        secondsRemaining: state.questions.length * SECONDS_PER_QUESTION,
       };
     case 'newAnswer':
       const question = state.questions.at(state.index);
@@ -71,6 +75,12 @@ function reducer(state, action) {
         answer: null,
         points: 0,
         highscore: state.highscore,
+      };
+    case 'tick':
+      return {
+        ...state,
+        secondsRemaining: state.secondsRemaining - 1,
+        status: state.secondsRemaining === 0 ? 'finished' : state.status,
       };
 
     default:
@@ -150,6 +160,7 @@ function App() {
             index={index}
             numQuestions={numQuestions}
           />
+          <Timer dispatch={dispatch} secondsRemaining={secondsRemaining} />
         </>
       )}
 

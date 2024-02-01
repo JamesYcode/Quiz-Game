@@ -203,6 +203,22 @@ progress {
   margin: 4rem auto;
 }
 
+.timer-container {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.timer {
+  padding: 1.3rem 2.5rem;
+  font-size: 1.3rem;
+  text-align: center;
+  color: var(--color-medium);
+  border: 2px solid var(--color-dark);
+  border-radius: 100px;
+  cursor: pointer;
+}
+
 .loader-container {
   display: flex;
   flex-direction: column;
