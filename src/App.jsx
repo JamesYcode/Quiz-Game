@@ -154,7 +154,12 @@ function App() {
             <Loader />
           </>
         )}
-        {status === 'error' && <Error />}
+        {status === 'error' && (
+          <>
+            <Header />
+            <Error />
+          </>
+        )}
         {status === 'ready' && (
           <>
             <Header />
