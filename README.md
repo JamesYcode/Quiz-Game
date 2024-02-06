@@ -1,1 +1,1 @@
-Npm i then run npm run json-server to run data.json file. After run npm run dev to start the app.
+Npm i then run npm run server to start server (data.json) file. After run npm run dev to start the app.
