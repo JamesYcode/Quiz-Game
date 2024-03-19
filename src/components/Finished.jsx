@@ -1,4 +1,4 @@
-function Finished({ points, maxPossiblePoints, dispatch, highscore }) {
+function Finished({ points, maxPossiblePoints, dispatch, highScore }) {
   const percentage = Math.ceil((points / maxPossiblePoints) * 100);
   let result;
   if (percentage === 100) result = '🥇';
@@ -13,7 +13,7 @@ function Finished({ points, maxPossiblePoints, dispatch, highscore }) {
         ({result}) You scored {points} out of {maxPossiblePoints} ({percentage}
         %)
       </p>
-      <p className='highscore'>(Highscore: {highscore} points)</p>
+      <p className='highScore'>(highScore: {highScore} points)</p>
       <button
         onClick={() => dispatch({ type: 'restart' })}
         className='btn btn-ui'

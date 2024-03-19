@@ -15,7 +15,7 @@ const initialState = {
   index: 0,
   answer: null,
   points: 0,
-  highscore: 0,
+  highScore: 0,
   secondsRemaining: 10,
   type: null,
 };
@@ -24,7 +24,7 @@ const SECONDS_PER_QUESTION = 30;
 
 function reducer(state, action) {
   switch (action.type) {
-    case 'dataRecieved':
+    case 'dataReceived':
       return {
         ...state,
         questions: action.payload,
@@ -70,8 +70,8 @@ function reducer(state, action) {
         ...state,
         answer: null,
         status: 'finished',
-        highscore:
-          state.points > state.highscore ? state.points : state.highscore,
+        highScore:
+          state.points > state.highScore ? state.points : state.highScore,
       };
     case 'restart':
       return {
@@ -80,7 +80,7 @@ function reducer(state, action) {
         index: 0,
         answer: null,
         points: 0,
-        highscore: state.highscore,
+        highScore: state.highScore,
         type: null,
       };
     case 'tick':
@@ -103,7 +103,7 @@ function App() {
         const res = await fetch('http://localhost:8000/questions');
         const data = await res.json();
 
-        dispatch({ type: 'dataRecieved', payload: shuffle(data) });
+        dispatch({ type: 'dataReceived', payload: shuffle(data) });
       } catch (e) {
         dispatch({ type: 'dataFailed' });
       }
@@ -117,7 +117,7 @@ function App() {
     index,
     answer,
     points,
-    highscore,
+    highScore,
     secondsRemaining,
     type,
   } = state;
@@ -198,7 +198,7 @@ function App() {
             points={points}
             maxPossiblePoints={maxPossiblePoints}
             dispatch={dispatch}
-            highscore={highscore}
+            highScore={highScore}
           />
         </div>
       )}
