@@ -100,7 +100,12 @@ function App() {
   useEffect(function () {
     async function fetchData() {
       try {
-        const res = await fetch('http://localhost:8000/questions');
+        // ! Use this method for development purpose!
+        // const res = await fetch('http://localhost:8000/questions');
+        // ! Deployment method
+        const res = await fetch(
+          'https://quizzy-api-4o0t.onrender.com/questions'
+        );
         const data = await res.json();
 
         dispatch({ type: 'dataReceived', payload: shuffle(data) });
