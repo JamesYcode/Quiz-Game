@@ -353,11 +353,9 @@ progress {
     justify-content: initial;
     flex-direction: row-reverse;
     align-items: center;
-    border: 1px solid red;
   }
 
   .btn-ui {
-    border: 1px solid red;
     max-width: 130px;
     width: 100%;
     float: right;
