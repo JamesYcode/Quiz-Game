@@ -35,21 +35,24 @@ function reducer(state, action) {
         ...state,
         status: 'error',
       };
-    case 'start':
+    case 'start': {
       const filteredQuestionsArr = state.questions.filter(
         (question) => question.type === action.payload
       );
+
       return {
         ...state,
         status: 'active',
         type: action.payload,
         secondsRemaining: filteredQuestionsArr.length * SECONDS_PER_QUESTION,
       };
-    case 'newAnswer':
+    }
+    case 'newAnswer': {
       const filteredQuestions = state.questions.filter(
         (question) => question.type === state.type
       );
       const question = filteredQuestions.at(state.index);
+
       return {
         ...state,
         answer: action.payload,
@@ -58,6 +61,7 @@ function reducer(state, action) {
             ? state.points + question.points
             : state.points,
       };
+    }
 
     case 'nextQuestion':
       return {
@@ -82,6 +86,7 @@ function reducer(state, action) {
         points: 0,
         highScore: state.highScore,
         type: null,
+        questions: action.payload,
       };
     case 'tick':
       return {
@@ -192,7 +197,12 @@ function App() {
             index={index}
             numQuestions={numQuestions}
           />
-          <Timer dispatch={dispatch} secondsRemaining={secondsRemaining} />
+          <Timer
+            dispatch={dispatch}
+            secondsRemaining={secondsRemaining}
+            shuffle={shuffle}
+            filteredQuestions={questions}
+          />
         </>
       )}
 
@@ -204,6 +214,8 @@ function App() {
             maxPossiblePoints={maxPossiblePoints}
             dispatch={dispatch}
             highScore={highScore}
+            shuffle={shuffle}
+            filteredQuestions={questions}
           />
         </div>
       )}

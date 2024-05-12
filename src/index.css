@@ -213,6 +213,7 @@ progress {
   width: 50%;
   margin: 0 auto;
   display: flex;
+  gap: 2rem;
 }
 
 .timer {
@@ -222,7 +223,19 @@ progress {
   color: var(--color-medium);
   border: 2px solid var(--color-dark);
   border-radius: 100px;
+}
+
+.countdown {
+  cursor: not-allowed;
+}
+
+.go-back {
   cursor: pointer;
+  transition: background-color 0.7s ease;
+}
+
+.go-back:hover {
+  background-color: var(--color-dark);
 }
 
 .loader-container {
